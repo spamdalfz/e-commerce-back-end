@@ -114,8 +114,15 @@ router.put('/:id', (req, res) => {
     });
 });
 
-router.delete('/:id', (req, res) => {
-  // delete one product by its `id` value
+// delete one product by 'id' value 
+router.delete('/:id', async (req, res) => {
+  try {
+    const tag = await Tag.destroy({ where: { id: req.params.id } });
+    res.json(tag);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to delete tag' });
+  }
 });
 
 module.exports = router;
