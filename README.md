@@ -1,4 +1,4 @@
-# E-Commerce Inventory Manager
+# E-commerce Backend
 
 ![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 
