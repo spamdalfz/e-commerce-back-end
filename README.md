@@ -4,13 +4,14 @@
 
 ## Description
 
-The E-commerce App is a Node.js and Express.js application designed to manage an online store. The application allows the user to view, add, update, and delete products, categories, and tags, as well as view products by category and tag. The user is presented with a series of routes to interact with the database and perform these actions.
+This is the backend for an e-commerce website. The application uses Express.js and Sequelize to create a RESTful API that interacts with a MySQL database. The API allows the user to perform CRUD operations on products, categories, and tags, as well as view product tags and category products.
 
 ## Table of Contents
 
 - [Setting up the Database](#setting-up-the-database)
 - [Running the Application](#running-the-application)
 - [Routes](#routes)
+- [Dependencies](#dependencies)
 - [License](#license)
 - [Contributing](#contributing)
 - [Tests](#tests)
@@ -27,14 +28,12 @@ To install this application, follow these steps:
    Follow the instructions provided to install Node.js on your local machine.
 4. Open your terminal and navigate to the root directory of the application.
 5. Install the required dependencies by running `npm install`, this will install all the necessary packages and libraries required for the application to run.
-6. Create a `.env` file in the root directory of the application by running the command `touch .env`. This file will contain sensitive information such as passwords, so be sure to keep it secure.
-7. In the .env file, add the following lines, replacing 'your_password' with the password for your MySQL login.
+6. Create a .env file in the root directory of the application and provide your database credentials. Example:
 
 ```
-DB_HOST='localhost'
-DB_USER='root'
-DB_PASSWORD='your_password'
-DB_NAME='employee_db'
+DB_USER='your_mysql_username'
+DB_PASSWORD='your_mysql_password'
+DB_NAME='ecommerce_db'
 ```
 
 8. Log in to the MySQL server by running the command `mysql -u root -p` and entering your password when prompted.
@@ -42,22 +41,20 @@ DB_NAME='employee_db'
 
 _Please note that steps 8 & 9 should be performed in a separate terminal window or tab from the one running the Node.js application._
 
-## Running the Application
+## Usage
 
-To use this application, please follow the steps below:
+To use this application, follow these steps:
 
 1. Open a terminal window and navigate to the root directory of the application.
 2. Seed the database by running `npm run seed`
 3. Start the application by running `npm run start`.
-4. Choose an action from the main menu by using the arrow keys and pressing Enter.
-5. Follow the prompts to perform the desired action.
-6. To exit the application, select "Exit" from the main menu or press Ctrl + C.
+4. Use a tool such as [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/) to test the various routes of the API.
 
 For a short demonstration of the application, please refer to the [video](https://drive.google.com/file/d/1P6jclrDBn-JZTwHvc2ITkHvrgPkNnccJ/view).
 
 ## Routes
 
-The following routes are available in the application:
+The following routes are available in the API:
 
 ### Categories
 
