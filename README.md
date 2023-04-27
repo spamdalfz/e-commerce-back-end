@@ -8,8 +8,8 @@ This is the backend for an e-commerce website. The application uses Express.js a
 
 ## Table of Contents
 
-- [Setting up the Database](#setting-up-the-database)
-- [Running the Application](#running-the-application)
+- [Installation](#installation)
+- [Usage](#usage)
 - [Routes](#routes)
 - [Dependencies](#dependencies)
 - [License](#license)
@@ -17,7 +17,7 @@ This is the backend for an e-commerce website. The application uses Express.js a
 - [Tests](#tests)
 - [Questions](#questions)
 
-## Setting up the Database
+## Installation
 
 To install this application, follow these steps:
 
@@ -46,7 +46,7 @@ _Please note that steps 8 & 9 should be performed in a separate terminal window 
 To use this application, follow these steps:
 
 1. Open a terminal window and navigate to the root directory of the application.
-2. Seed the database by running `npm run seed`
+2. Run the command `npm run seed` to seed the database with sample data.
 3. Start the application by running `npm run start`.
 4. Use a tool such as [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/) to test the various routes of the API.
 
